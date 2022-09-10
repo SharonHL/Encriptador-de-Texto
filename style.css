@@ -1,0 +1,226 @@
+html{
+    height: 100%;
+}
+body{
+    background: #E5E5E5;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+.logo{
+    text-align: center;
+    background: #e2eafc;
+    padding: 2px;
+    margin-top: 10px;
+}
+.logo h1{
+    margin: 0;
+    color: #0a3871;
+}
+main{
+    display: flex;/* Para alinear los elementos */
+    justify-content: space-around;/*justifica el contenido horizontalmente*/
+    flex-grow: 1;
+    margin: 10px 0;
+    padding: 0 10px;
+}
+.principal{
+
+    flex-grow: 4;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.solucion{
+    background: #FFFFFF;
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.solucion img{
+    max-width: 100%;
+}
+.input-texto{
+    width: 99%;
+    display: block;
+    resize: none;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #0A3871;
+    font-size: 18px;
+    flex-grow: 1;
+}
+.input-texto:focus{
+    border: none;
+    background: transparent;
+}
+.input-texto::placeholder{
+    color: #0A3871;
+    font-size: 18px;
+}
+.importante{
+    font-style: italic;
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+.boton {
+    /*width: 250px;*/
+    height: 50px;
+    border-radius: 24px;
+    font-weight: bold;
+    flex-grow: 1;
+}
+.boton:hover {
+  transition: 0.5s ease-in-out;
+  background: #4B66A5;
+  color: #ffffff;
+}
+
+.encriptar{
+    background: #0A3871;
+    border: #0A3871 1px solid;
+    color: #ffffff;
+}
+.desencriptar{
+    background: #D8DFE8;
+    border: #0A3871 1px solid;
+    color: #0A3871; 
+}
+.resultado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border-radius: 15px;
+}
+.input-resultado{
+    display: block;
+    resize: none;
+    width: 100%;
+    /*height: 90%;*/
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #0A3871;
+    font-size: 18px;
+    flex-grow: 1;
+}
+.input-resultado::placeholder{
+    color: #0A3871;
+}
+.resultado div{
+    display: flex;
+    width: 100%;
+}
+footer{
+    display: flex;
+    margin-top: 20px;
+    background: #0a3871;
+    color: white;
+    padding: 10px;
+    margin-top: auto;
+}
+.personal{
+    flex-grow: 4;
+}
+.programa{
+    display: flex;
+    align-items: center;
+}
+.programa img{
+    height: 60px;
+}
+.sociales{
+    display: flex;
+    gap: 15px;
+}
+.sociales a{
+    color: white;
+}
+@media only screen and (max-width: 680px) {
+    main {
+        flex-direction: column;
+    }
+    .logo h1 > * {
+        display: inline-block;
+    }
+    footer{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .personal{
+        text-align: center;
+    }
+    .sociales{
+        justify-content: center;
+    }
+    .programa{
+        /*display: none;*/
+        border-top: 1px solid white;
+        padding: 10px;
+        justify-content: end;
+    }
+}
+@media only screen and (max-width: 680px) {
+    .input-texto{
+        min-height: 200px;
+    }
+    .input-resultado {
+        min-height: 200px;
+    }
+}
+/***********************************/
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 290px; /* Set a default minimum width */
+  margin-left: -145px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 3s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;visibility: hidden;}
+}
