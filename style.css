@@ -13,6 +13,8 @@ body{
     background: #e2eafc;
     padding: 2px;
     margin-top: 10px;
+    font-family: sans-serif;
+    
 }
 .logo h1{
     margin: 0;
@@ -162,7 +164,6 @@ footer{
         justify-content: center;
     }
     .programa{
-        /*display: none;*/
         border-top: 1px solid white;
         padding: 10px;
         justify-content: end;
