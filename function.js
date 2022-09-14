@@ -29,6 +29,7 @@
     /**********BOTON DESENCRIPTAR**********/
     var btn_desencriptar = document.getElementById("desencriptar");
     btn_desencriptar.addEventListener('click', desencriptar);
+    
     function desencriptar() {
         var texto = document.getElementById('input-texto').value;
         if(texto==""){
@@ -58,7 +59,6 @@
 
         navigator.clipboard.writeText(texto);
 
-        //alert("Texto copiado al portapapeles");
         mostrarMensaje("Texto copiado al portapapeles");
     }
     /*****************************************/
